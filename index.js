@@ -46,7 +46,7 @@ bot.on("message", async message => {
 })
 bot.on('guildMemberAdd', async member => {
 	
-	let wChan = db.fetch(`${member.guild.id}`)
+	let wChan = member.guild.channels.find(`name`, `welcome-bye`);
 	
 	if(wChan == null) return;
 	
