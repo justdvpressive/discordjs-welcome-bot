@@ -46,7 +46,7 @@ bot.on("message", async message => {
 })
 bot.on('guildMemberAdd', async member => {
 	
-	let wChan = member.guild.channels.find(`name`, `welcome-bye`);
+	let wChan = bot.channels.get('572498372447961092');
 	
 	if(wChan == null) return;
 	
